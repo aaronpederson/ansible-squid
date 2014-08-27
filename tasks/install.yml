@@ -11,7 +11,7 @@
 
 - name: Service Stopped | squid
   service:
-    name: squid
+    name: squid3
     state: stopped
   tags:
     - disruptive
