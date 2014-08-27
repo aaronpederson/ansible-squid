@@ -1,0 +1,3 @@
+---
+squid_runtime_root: "{{ runtime_root }}/squid"
+squid_pidfile_path: "{{ squid_runtime_root }}/squid.pid"

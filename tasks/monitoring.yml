@@ -1,1 +1,36 @@
-x
+---
+- name: "Directory Exists | {{ squid_runtime_root }}"
+  file:
+    state: directory
+    path: "{{ squid_runtime_root }}"
+    owner: root
+    group: wcmetrics
+    mode: 0775
+  tags:
+    - directory-structure
+    - runtime-data
+    - squid
+
+- name: Upload Config | monit | squid
+  template:
+    src: etc/monit/conf.d/squid
+    dest: /etc/monit/conf.d/squid
+  notify: Reload Service | monit
+  tags:
+    - monitoring
+    - monitoring-setup
+    - using-monit
+    - squid
+
+- name: Trigger All Callbacks
+  meta: flush_handlers
+
+- name: Confirm Monitoring | squid
+  monit:
+    state: present
+    name: squid
+  tags:
+    - monitoring
+    - validation
+    - using-monit
+    - squid
