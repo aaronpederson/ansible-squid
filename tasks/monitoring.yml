@@ -3,8 +3,8 @@
   file:
     state: directory
     path: "{{ squid_runtime_root }}"
-    owner: root
-    group: wcmetrics
+    owner: "{{ squid_user }}"
+    group: wcadmin
     mode: 0775
   tags:
     - directory-structure

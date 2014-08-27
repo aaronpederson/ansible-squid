@@ -8,3 +8,10 @@
   tags:
     - software-installation
     - using-apt
+
+- name: Service Stopped | squid
+  service:
+    name: squid
+    state: stopped
+  tags:
+    - disruptive

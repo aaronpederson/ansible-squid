@@ -1,0 +1,12 @@
+---
+- name: Configure | squid | pid_filename
+  lineinfile:
+    state: present
+    dest: /etc/squid3/squid.conf
+    regexp: '^#* *pid_filename '
+    line: "pid_filename {{ squid_pidfile_path }}"
+  notify: Reload Service | squid
+  tags:
+    - configuration
+    - precise-configuration
+    - squid
