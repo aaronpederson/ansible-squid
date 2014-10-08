@@ -24,13 +24,3 @@
 
 - name: Trigger All Callbacks
   meta: flush_handlers
-
-- name: Confirm Monitoring | squid
-  monit:
-    state: present
-    name: squid
-  tags:
-    - monitoring
-    - validation
-    - using-monit
-    - squid
