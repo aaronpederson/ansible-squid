@@ -2,7 +2,7 @@
 - name: Reload Service | monit
   command: monit reload
   tags:
-    - monit
+    - using-monit
 
 - name: Reload Service | squid
   monit:
