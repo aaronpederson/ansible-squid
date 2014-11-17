@@ -1,0 +1,5 @@
+---
+dependencies:
+  - role: meta/monitor
+    monitor_name: squid
+    monitor_pidfile: "{{ squid_pidfile_path }}"
