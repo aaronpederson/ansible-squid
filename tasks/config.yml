@@ -1,10 +1,17 @@
 ---
-- name: Configure | squid | pid_filename
+- name: Configure | squid
   lineinfile:
     state: present
     dest: /etc/squid3/squid.conf
-    regexp: '^#* *pid_filename '
-    line: "pid_filename {{ squid_pidfile_path }}"
+    regexp: "{{ item.regexp }}"
+    line: "{{ item.line }}"
+  with_items:
+    - regexp: '^#* *pid_filename'
+      line: "pid_filename {{ squid_pidfile_path }}"
+    - regexp: '^#* *acl vpc'
+      line: "acl vpc src {{ squid_allow_access_from }}"
+    - regexp: '^#* *http_access allow vpc'
+      line: 'http_access allow vpc'
   notify: Reload Service | squid
   tags:
     - configuration
