@@ -2,6 +2,7 @@
 dependencies:
   - role: meta/monitor
     monitor_name: squid
+    monitor_user: "{{ squid_user }}"
     monitor_pidfile: "{{ squid_pidfile_path }}"
     monitor_start_command: /usr/sbin/service squid3 start
     monitor_stop_command: /usr/sbin/service squid3 stop
