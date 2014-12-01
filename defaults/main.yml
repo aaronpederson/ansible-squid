@@ -1,6 +1,11 @@
 ---
 squid_user: proxy
-
 squid_runtime_root: "{{ runtime_root }}/squid"
 squid_pidfile_path: "{{ squid_runtime_root }}/squid.pid"
-squid_allow_access_from: 10.0.0.0/16
+
+squid_listen_on_port: 3128
+squid_allow_access_to_ports:
+  - 80
+  - 443
+squid_allow_access_from_ips:
+  - 10.0.0.0/16
