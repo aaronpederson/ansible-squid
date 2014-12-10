@@ -1,9 +1,4 @@
 ---
-- name: Reload Service | monit
-  command: monit reload
-  tags:
-    - using-monit
-
 - name: Reload Service | squid
   monit:
     state: restarted
