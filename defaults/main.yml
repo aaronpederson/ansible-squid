@@ -1,6 +1,6 @@
 ---
 squid_user: proxy
-squid_runtime_root: "{{ runtime_root }}/squid"
+squid_runtime_root: "{{ runtime_root | default('/var/run') }}/squid"
 squid_pidfile_path: "{{ squid_runtime_root }}/squid.pid"
 
 squid_listen_on_port: 3128
