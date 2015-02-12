@@ -1,4 +1,16 @@
 ---
+- name: "Directory Exists | {{ squid_runtime_root }}"
+  file:
+    state: directory
+    path: "{{ squid_runtime_root }}"
+    owner: "{{ squid_user }}"
+    group: wcadmin
+    mode: 0775
+  tags:
+    - directory-structure
+    - runtime-data
+    - squid
+
 - name: Upload Config | squid
   template:
     src: "{{ item }}"
