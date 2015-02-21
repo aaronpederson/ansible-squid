@@ -1,8 +1,7 @@
 ---
 - name: Reload Service | squid
-  monit:
-    state: restarted
+  service:
+    state: reloaded
     name: squid
   tags:
-    - using-monit
     - disruptive
