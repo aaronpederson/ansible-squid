@@ -1,7 +1,11 @@
 ---
-dependencies:
-  - role: meta/monitor
-    monitor_name: squid
-    monitor_pidfile: "{{ squid_pidfile_path }}"
-    monitor_start_command: /usr/sbin/service squid3 start
-    monitor_stop_command: /usr/sbin/service squid3 stop
+galaxy_info:
+  author: Aaron Pederson
+  description: Squid - a caching proxy for the Web supporting HTTP, HTTPS, FTP, and more.
+  license: MIT
+  platforms:
+    - name: Ubuntu
+      versions:
+        - trusty
+  categories:
+    - networking
