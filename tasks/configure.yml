@@ -4,7 +4,7 @@
     state: directory
     path: "{{ squid_runtime_root }}"
     owner: "{{ squid_user }}"
-    group: wcadmin
+    group: "{{ squid_group }}"
     mode: 0775
   tags:
     - directory-structure
