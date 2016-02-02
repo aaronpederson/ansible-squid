@@ -21,8 +21,9 @@ describe 'ansible-squid::default' do
     it { should be_listening }
   end
 
-  describe service('squid') do
+  describe service('squid3') do
     it { should be_installed }
     it { should be_running }
   end
+
 end

@@ -1,12 +1,12 @@
 ---
-- name: service | squid | reloaded
+- name: service | squid3 | reloaded
   service:
     state: reloaded
     name: squid
   tags:
     - disruptive
 
-- name: service | squid | started
+- name: service | squid3 | started
   service:
     name: squid
     state: started

@@ -17,7 +17,7 @@
     dest: "/{{ item }}"
   with_items:
     - etc/squid3/squid.conf
-  notify: service | squid | reloaded
+  notify: service | squid3 | started
   tags:
     - configuration
     - template-configuration
