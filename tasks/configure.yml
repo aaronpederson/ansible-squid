@@ -16,7 +16,7 @@
     src: "{{ item }}"
     dest: "/{{ item }}"
   with_items:
-    - etc/squid3/squid.conf
+    - /etc/squid3/squid.conf
   notify: service | squid3 | restarted
   tags:
     - configuration
