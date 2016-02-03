@@ -2,13 +2,13 @@
 - name: service | squid3 | reloaded
   service:
     state: reloaded
-    name: squid
+    name: squid3
   tags:
     - disruptive
 
 - name: service | squid3 | started
   service:
-    name: squid
+    name: squid3
     state: started
   tags:
     - disruptive
