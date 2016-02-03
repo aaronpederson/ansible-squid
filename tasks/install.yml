@@ -3,6 +3,7 @@
   apt:
     state: latest
     name: "{{ item }}"
+    update_cache: yes
   with_items:
     - squid3
   tags:
