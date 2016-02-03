@@ -6,9 +6,3 @@
   tags:
     - disruptive
 
-- name: service | squid3 | started
-  service:
-    name: squid3
-    state: started
-  tags:
-    - disruptive
