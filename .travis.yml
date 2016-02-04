@@ -1,0 +1,14 @@
+---
+sudo: required
+
+services: docker
+
+install:
+  - bundle install
+
+script:
+  - bundle exec kitchen test
+
+notifications:
+  slack:
+    secure: n5fEvZDKUlrXgJxOYihkwS5dyVW97OY2qCL7fNRFDN1PsqOEs+N2Prs3uYWcNO3sZfgFDeXwjZRlzvP/9QxMlHIMP/6etDxAtiXS+ssF8F48lPlAnshWuvisVKCia+t2sR9xEPQBGQZhkDY1xWFp9sU2/FkihX4mRDBZ0Gaw1nDXmbgp82NXNKSQxdsqooRpsD7NeRcrCLU+naOx9HPSyi8wnX2BCH8+VueT5aEa65cq+sbQZGiS4ZDS8cIVD6kUy27Ut27Df0SSwU4uQn42NPHIXEL0zAfFA4ojav7KDVVP8h6dhU/B66cN80pgwxH6My9oniXbmwMHFOLENDF+UGho7GAYVnx2dpDQBHkqBn4iRywakeRP3jfWG6Foj1dmK6W2SnOBgRA1oIy7OjjVWZTIxQCt7Txt4KG+7U+k0uBDpAmXmXXXYRXFWXJ+vtQVuBT/rZXjRwz+XMraO9/ElXk72mY3MYsk9L2EQzQHQ5vrN90g3yP48E0DWHJGldmNZI899DpIr4WY4NYZlVqnZurZNfe5JzM/YgeAB3KkzbYE2wkubRbQ/TEchfY3QP3sZD1I4pnaUN507VDQf61SaaJB2OYTpE7IhrAaHyWP6Its8VNcmmUEigxBjMC/Hjp7LLzGngl33GnGbur52YlOnJ/+mgtfE4TyYJaH1AD0uXc=
