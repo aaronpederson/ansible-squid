@@ -1,7 +1,8 @@
 ---
-- name: Reload Service | squid
+- name: service | squid3 | restarted
   service:
-    state: reloaded
-    name: squid
+    state: restarted
+    name: squid3
   tags:
     - disruptive
+
